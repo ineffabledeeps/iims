@@ -1,23 +1,16 @@
-import { useState } from "react";
-import ButtonTabs from "./components/buttonTabs/buttonTabs.component";
-import Class from "./components/class/class.component";
+import Classroom from "./Classroom";
+import Faculty from "./Faculty";
+import { Route, BrowserRouter, Routes } from "react-router-dom";
 
-import "./styles.css";
 
 export default function App() {
-  const [tab, setTab] = useState("3rdFloor");
+    return ( <BrowserRouter>
+        <Routes>
+        <Route path = "Classroom/" element = { <Classroom/> }/> 
+        <Route path = "Faculty/" element = { <Faculty/> }/> 
 
-  const handleClick = (btnName) => {
-    setTab(btnName);
-  };
-  return (
-    <div className="App">
-      {/* Button Tabs */}
-      <ButtonTabs onClickHandler={handleClick} currentTab={tab} />
+        </Routes> 
+        </BrowserRouter>
 
-      {/* Classes */}
-      <Class started={true} />
-      <Class started={false} />
-    </div>
-  );
+    );
 }
