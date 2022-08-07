@@ -1,0 +1,19 @@
+.btn-tabs-container-faculty {
+  display: flex;
+  justify-content: center;
+  column-gap: 1rem;
+}
+.btn-tab-faculty {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  background: #fff1da;
+  color: black;
+  width: 150px;
+  height: 118px;
+  border: none;
+  border-radius: 11px;
+  transition: all 0.3s;
+}
+.active-btn-faculty {
+  background: #ffba48;
+}

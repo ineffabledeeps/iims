@@ -1,0 +1,66 @@
+.faculty-table-faculty {
+  margin: 2rem 10rem 4rem 10rem;
+}
+.status-heading-faculty {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+.status-faculty {
+  width: 30px;
+  height: 30px;
+}
+
+.notAvailable-faculty {
+  background: #f4f4f4;
+  border: none;
+}
+
+.faculty-card-faculty {
+  width: 830px;
+  height: 155px;
+  border: 1px solid #ffba48;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 5rem;
+  margin-bottom: 1rem;
+}
+.faculty-pfp-faculty {
+  width: 78px;
+  height: 78px;
+}
+.faculty-name-cabin-faculty,
+.faculty-timeSlot-container-faculty {
+  text-align: center;
+}
+.faculty-name-faculty {
+  font-weight: 600;
+  width: 120px;
+}
+.faculty-cabin-faculty {
+  font-weight: 400;
+  font-size: 15px;
+  letter-spacing: -0.28px;
+  color: #727272;
+}
+.faculty-mail-faculty {
+  height: 27px;
+  cursor: pointer;
+}
+.faculty-timeSlot-faculty {
+  font-weight: 400;
+  font-size: 15px;
+  letter-spacing: -0.28px;
+  color: #646464;
+}
+.faculty-contact-faculty {
+  cursor: pointer;
+  padding: 10px 25px;
+  background: #ffba48;
+  border: none;
+  border-radius: 14px;
+}
