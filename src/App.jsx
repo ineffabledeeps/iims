@@ -12,7 +12,7 @@ import LostandFound from "./pages/LostandFound";
 import { Switch, Route, Redirect } from "react-router-dom";
 import Loginuser from "./pages/Loginuser";
 import Bluebar from "./components/header/Bluebar";
-
+import FacultyRequestTable from "./components/facultyRequestTable/facultyRequestTable.component";
 
 // Kaiff Work Start
 
@@ -52,6 +52,7 @@ const App = () => {
         <Route exact path="/calender" component={Calender} />
         <Route exact path="/classroom" component={Classroom} />
         <Route exact path="/faculty" component={Faculty} />
+        <Route exact path="/request" component={FacultyRequestTable} />
         <Route exact path="/exam" component={Exam} />
         <Route exact path="/lostandfound" component={LostandFound} />
         <Route exact path="/loginuser" component={Loginuser} />

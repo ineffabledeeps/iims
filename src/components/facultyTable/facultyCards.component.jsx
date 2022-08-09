@@ -5,7 +5,24 @@ import availablePfpImage from "../../Data/faculty-img.png";
 import notAvailablePfpImage from "../../Data/notAvailable-faculty-img.png";
 
 export default function ClassDetails({ detail, className }) {
-  const { pfp, fac_name, fac_cab_no, timeSlot, status } = detail;
+  const { pfp, fac_id,fac_name, fac_cab_no, timeSlot, status } = detail;
+
+  const onContactHandler = () => {
+    (async () => {
+      const resp = await fetch("http://localhost:8000/api/send_requests/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+        "fac_id":`${fac_id}`,
+        "prn":"2001"
+         }),
+      })
+      
+    }) ()
+    // window.location.reload();
+  }
 
   return (
     <article className={`faculty-card-faculty ${className}`}>
@@ -19,7 +36,7 @@ export default function ClassDetails({ detail, className }) {
         <p className="faculty-timeSlot-faculty">Time Slot</p>
         <p className="faculty-time-faculty">{timeSlot}</p>
       </div>
-      <button className="faculty-contact-faculty">Contact</button>
+      <button className="faculty-contact-faculty" disabled={!detail.available} onClick={onContactHandler}>Contact</button>
     </article>
   );
 }
